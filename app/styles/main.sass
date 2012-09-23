@@ -1,1 +1,67 @@
-@import "normalize"@import "compass/css3/images"@import "compass/css3/font-face"$BACKGROUND_MIXED_COLOR: #eee$BACKGROUND_BASIC_COLOR: #f2f2f2$BACKGROUND_STRIPES_COLOR: #ddd$HIGHLIGHT_COLOR: #390$HEADER_HEIGHT: 16px * 4+font-face("icons", inline-font-files("icons.woff", woff))body    background: $BACKGROUND_MIXED_COLOR    +background($BACKGROUND_BASIC_COLOR linear-gradient(-45deg, $BACKGROUND_STRIPES_COLOR, $BACKGROUND_STRIPES_COLOR 3%, transparent 3%, transparent 47%, $BACKGROUND_STRIPES_COLOR 47%, $BACKGROUND_STRIPES_COLOR 53%, transparent 53%, transparent 97%, $BACKGROUND_STRIPES_COLOR 97%, $BACKGROUND_STRIPES_COLOR 100%))    background-size: 14px 14px.btn    border-radius: 8px    text-shadow: 0 -1px 0 black    +background(image_url("noise.png"), linear-gradient(#262626, #000))    width: 8px * 7    height: 8px * 7    line-height: 8px * 7 - 1px    font-size: 44px    padding-right: 10px    box-sizing: border-box    color: white    display: inline-block    text-decoration: none    text-align: center    font-family: "icons"    &.tel::after        content: "p"[role="banner"]    box-sizing: border-box    border-top: 2px $HIGHLIGHT_COLOR solid    padding: 8px    height: $HEADER_HEIGHT    background: black    top: 0    position: relative    .inner        padding: 0 64px        text-align: center    .logo        width: (368px / 2)        height: (99px / 2)        background: image_url("frizz-logo.png") no-repeat scroll        background-size: (368px / 2) (99px / 2)        display: inline-block    .btn        position: absolute    .right        right: 8px        top: 2px
+@import "normalize"
+@import "compass/css3/images"
+@import "compass/css3/font-face"
+
+$BACKGROUND_MIXED_COLOR: #eee
+$BACKGROUND_BASIC_COLOR: #f2f2f2
+$BACKGROUND_STRIPES_COLOR: #ddd
+$HIGHLIGHT_COLOR: #390
+
+$HEADER_HEIGHT: 16px * 4
+
++font-face("icons", inline-font-files("icons.woff", woff))
+
+body
+    background: $BACKGROUND_MIXED_COLOR
+    +background($BACKGROUND_BASIC_COLOR linear-gradient(-45deg, $BACKGROUND_STRIPES_COLOR, $BACKGROUND_STRIPES_COLOR 3%, transparent 3%, transparent 47%, $BACKGROUND_STRIPES_COLOR 47%, $BACKGROUND_STRIPES_COLOR 53%, transparent 53%, transparent 97%, $BACKGROUND_STRIPES_COLOR 97%, $BACKGROUND_STRIPES_COLOR 100%))
+    background-size: 14px 14px
+
+.btn
+    +background(image_url("noise.png"), linear-gradient(#262626, #111))
+
+    height: 8px * 7
+    width: 8px * 7
+    line-height: 8px * 7 - 1px
+
+    box-sizing: border-box
+    display: inline-block
+    padding-right: 10px
+
+    border-radius: 8px
+    color: white
+    font-family: "icons"
+    font-size: 44px
+    text-align: center
+    text-decoration: none
+    text-shadow: 0 -1px 0 black
+
+    &.tel::after
+        content: "p"
+
+[role="banner"]
+    height: $HEADER_HEIGHT
+    box-sizing: border-box
+    padding: 8px
+    position: relative
+
+    background: #111
+    border-top: 2px $HIGHLIGHT_COLOR solid
+
+    .inner
+        padding: 0 64px
+        text-align: center
+
+    .logo
+        width: (368px / 2)
+        height: (99px / 2)
+        background: image_url("frizz-logo.png") no-repeat scroll
+        background-size: (368px / 2) (99px / 2)
+
+        display: inline-block
+
+    .btn
+        position: absolute
+
+    .right
+        right: 8px
+        top: 2px
