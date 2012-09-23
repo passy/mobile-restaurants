@@ -2,7 +2,9 @@ require.config({
   shim: {
   },
 
-  paths: {
+ paths: {
+    AngularJS: '../../components/AngularJS/angular',
+
     jquery: 'vendor/jquery.min'
   }
 });
