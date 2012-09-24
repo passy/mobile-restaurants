@@ -6,11 +6,12 @@
 $BACKGROUND_MIXED_COLOR: #eee
 $BACKGROUND_BASIC_COLOR: #f2f2f2
 $BACKGROUND_STRIPES_COLOR: #ddd
+$BACKGROUND_CONTENT_COLOR: #f9f9f9
 $BORDER_COLOR: #c7c7c7
 $HIGHLIGHT_COLOR: #390
 $TEXT_COLOR: #333
 
-$HEADER_HEIGHT: 16px * 4
+$HEADER_HEIGHT: 16px * 3
 
 +font-face("icons", inline-font-files("icons.woff", woff))
 
@@ -22,6 +23,12 @@ $HEADER_HEIGHT: 16px * 4
     +background(linear-gradient(-45deg, $BACKGROUND_MIXED_COLOR, $BACKGROUND_MIXED_COLOR 3%, transparent 3%, transparent 47%, $BACKGROUND_MIXED_COLOR 47%, $BACKGROUND_MIXED_COLOR 53%, transparent 53%, transparent 97%, $BACKGROUND_MIXED_COLOR 97%, $BACKGROUND_MIXED_COLOR 100%), linear-gradient(45deg, $BACKGROUND_MIXED_COLOR, $BACKGROUND_MIXED_COLOR 3%, transparent 3%, transparent 47%, $BACKGROUND_MIXED_COLOR 47%, $BACKGROUND_MIXED_COLOR 53%, transparent 53%, transparent 97%, $BACKGROUND_MIXED_COLOR 97%, $BACKGROUND_MIXED_COLOR 100%) white)
     background-size: 6px 6px
 
+*
+    box-sizing: border-box
+
+::selection
+    background: lighten($HIGHLIGHT_COLOR, 10%)
+
 body
     background: $BACKGROUND_MIXED_COLOR
     +striped-bg
@@ -29,26 +36,26 @@ body
 
 a
     color: darken($HIGHLIGHT_COLOR, 10%)
+    text-decoration: none
 
     &:hover
         color: $HIGHLIGHT_COLOR
 
 .btn
-    +background(image_url("noise.png"), linear-gradient(#262626, #111))
+    +background(image_url("noise.png"), linear-gradient(#262626, #222))
     +box-shadow(#111 0 0 1px inset)
 
-    height: 8px * 6
-    width: 8px * 6
-    line-height: 8px * 6
+    height: 8px * 5
+    width: 8px * 5
+    line-height: 8px * 5
 
-    box-sizing: border-box
     display: inline-block
     padding-right: 10px
 
     border-radius: 8px
     color: white
     font-family: "icons"
-    font-size: 40px
+    font-size: 35px
     text-align: center
     text-decoration: none
     text-shadow: 0 1px 1px #111
@@ -62,7 +69,6 @@ a
 
 
 [role="banner"]
-    box-sizing: border-box
     position: relative
     border-top: 2px $HIGHLIGHT_COLOR solid
 
@@ -79,10 +85,10 @@ a
 
     .logo
         margin-top: 8px
-        width: (368px / 2)
-        height: (99px / 2)
+        width: (368px / 2.5)
+        height: (99px / 2.5)
         background: image_url("frizz-logo.png") no-repeat scroll
-        background-size: (368px / 2) (99px / 2)
+        background-size: (368px / 2.5) (99px / 2.5)
 
         display: inline-block
 
@@ -93,32 +99,45 @@ a
 
     .right
         right: 16px
-        top: 6px
+        top: 4px
 
 [role="main"]
-    background: $BACKGROUND_MIXED_COLOR
+    background: $BACKGROUND_CONTENT_COLOR
     border: 5px solid $BORDER_COLOR
     margin: 8px 16px
+    padding: 16px
 
 [role="navigation"]
-    +crossed-bg
-
-
     position: relative
     z-index: 0
-
-    padding: 8px
-    box-sizing: border-box
-
-    border-bottom: 1px solid $BORDER_COLOR
 
     ul
         list-style-type: none
         list-style-position: inside
-        margin: 0
+        margin: 8px 16px 0 16px
         padding: 0
+        text-align: center
+        white-space: nowrap
+        white-space-collapse: discard
 
     li
         display: inline-block
-        padding: 0
-        width: 30%
+        height: $HEADER_HEIGHT
+        width: 33.3333%
+        text-align: center
+
+        padding-right: 8px
+
+
+        &:last-child
+            padding: 0
+
+        a
+            +crossed-bg
+            +box-shadow($HIGHLIGHT_COLOR 0 -5px 3px -3px inset, $BORDER_COLOR 0 0 10px 0 inset)
+            border: 1px solid $BORDER_COLOR
+            display: inline-block
+            height: 100%
+            width: 100%
+            text-align: center
+            line-height: $HEADER_HEIGHT - 8px
