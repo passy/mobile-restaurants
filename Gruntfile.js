@@ -176,6 +176,10 @@ module.exports = function( grunt ) {
 
     min: {
       dist: ''
+    },
+
+    server: {
+        'hostname': "0.0.0.0"
     }
   });
 
