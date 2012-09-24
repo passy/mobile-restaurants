@@ -118,16 +118,14 @@ a
         padding: 0
         text-align: center
         white-space: nowrap
-        white-space-collapse: discard
 
     li
         display: inline-block
-        height: $HEADER_HEIGHT
+        height: 8px * 9
         width: 33.3333%
         text-align: center
 
         padding-right: 8px
-
 
         &:last-child
             padding: 0
@@ -140,4 +138,13 @@ a
             height: 100%
             width: 100%
             text-align: center
-            line-height: $HEADER_HEIGHT - 8px
+
+        figure
+            display: block
+            font-family: "icons"
+            font-size: 40px
+            color: $HIGHLIGHT_COLOR
+            text-shadow: 0 1px 1px #111
+
+            a
+                color: $TEXT_COLOR
