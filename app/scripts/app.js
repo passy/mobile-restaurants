@@ -10,7 +10,12 @@ define(['AngularJS'], function (angular) {
         .when('/home', {
             templateUrl: TEMPLATE_URL + "/home.html"
         })
+        .when('/contact', {
+            templateUrl: TEMPLATE_URL + "/contact.html"
+        })
         .otherwise({redirectTo: '/home'});
+
+      $locationProvider.html5Mode(true);
   }]);
 });
 }());
