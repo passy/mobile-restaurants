@@ -1,6 +1,6 @@
 define(['app/scripts/app'], ->
     describe "When initializing the app", ->
+        app = require "app/scripts/app"
         it "should be defined", ->
-            app = require "app/scripts/app"
             expect(app).toBeDefined()
 )

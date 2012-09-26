@@ -3,9 +3,9 @@
 
   define(['app/scripts/app'], function() {
     return describe("When initializing the app", function() {
+      var app;
+      app = require("app/scripts/app");
       return it("should be defined", function() {
-        var app;
-        app = require("app/scripts/app");
         return expect(app).toBeDefined();
       });
     });
