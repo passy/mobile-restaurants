@@ -17,22 +17,32 @@
   var load_original = requirejs.load;
   requirejs.load = function (context, moduleName, url) {
     url = timestamps[url];
+    if (url === undefined) {
+        throw new Error(moduleName + " hasn't been loaded.");
+    }
     return load_original.call(this, context, moduleName, url);
   };
 
   window.require.config({
-    baseUrl: '/base'
+    baseUrl: '/base',
+
+    shim: {
+      AngularJS: {
+        exports: 'angular'
+      }
+    },
+
+    paths: {
+        AngularJS: 'app/scripts/vendor/AngularJS/angular'
+    }
   });
-
-
-
 
   // make it async
   var start = window.__testacular__.start;
   window.__testacular__.start = function() {};
 
   // bootstrap
-  window.require(['main'], function() {
+  window.require(['test/unit/appSpec'], function() {
     start();
   });
 })();
