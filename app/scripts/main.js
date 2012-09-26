@@ -1,12 +1,19 @@
-require.config({
-  shim: {
-  },
+(function () {
+  'use strict';
 
- paths: {
-    AngularJS: 'vendor/AngularJS/angular'
-  }
-});
+  require.config({
+    shim: {
+      AngularJS: {
+        exports: 'angular'
+      }
+    },
 
-require(['app'], function(app) {
-    console.log(app);
-});
+    paths: {
+      AngularJS: 'vendor/AngularJS/angular'
+    }
+  });
+
+  require(['AngularJS', 'app'], function (angular) {
+    angular.bootstrap(document, ['appheaven']);
+  });
+}());
