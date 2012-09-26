@@ -1,3 +1,5 @@
-define([], function() {
-  return 'Hello from Yeoman!';
+'use strict';
+
+define(['AngularJS'], function (angular) {
+  return angular.module('appheaven', []);
 });

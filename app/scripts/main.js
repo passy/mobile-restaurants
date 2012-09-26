@@ -3,13 +3,10 @@ require.config({
   },
 
  paths: {
-    AngularJS: '../../components/AngularJS/angular',
-
-    jquery: 'vendor/jquery.min'
+    AngularJS: 'vendor/AngularJS/angular'
   }
 });
- 
+
 require(['app'], function(app) {
-  // use app here
-  console.log(app);
+    console.log(app);
 });
