@@ -41,6 +41,24 @@ a
     &:hover
         color: $HIGHLIGHT_COLOR
 
+@-webkit-keyframes in
+    from
+        -webkit-transform: translateX(-100%)
+    to
+        -webkit-transform: translateX(0%)
+
+@-webkit-keyframes out
+    from
+        -webkit-transform: translateX(0%)
+    to
+        -webkit-transform: translateX(100%)
+
+.anim-in
+    -webkit-animation: "in" 0.5s
+
+.anim-out
+    -webkit-animation: "out" 0.5s
+
 .btn
     +background(image_url("noise.png"), linear-gradient(#262626, #222))
     +box-shadow(#111 0 0 1px inset)
@@ -102,10 +120,17 @@ a
         top: 4px
 
 [role="main"]
-    background: $BACKGROUND_CONTENT_COLOR
-    border: 5px solid $BORDER_COLOR
+    position: relative
     margin: 8px 16px
-    padding: 16px
+
+    .content
+        position: absolute
+        top: 0
+        width: 100%
+
+        background: $BACKGROUND_CONTENT_COLOR
+        border: 5px solid $BORDER_COLOR
+        padding: 16px
 
 [role="navigation"]
     position: relative

@@ -13,7 +13,7 @@
     }
   });
 
-  require(['AngularJS', 'app'], function (angular) {
+  require(['AngularJS', 'app', 'directives'], function (angular) {
     angular.bootstrap(document, ['appheaven']);
   });
 }());
