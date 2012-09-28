@@ -181,10 +181,10 @@ module.exports = function( grunt ) {
     server: {
       hostname: "0.0.0.0",
       rewrite: [
-        '^/home$ / [L]',
-        '^/directions / [L]',
-        '^/menu / [L]',
-        '^/contact$ / [L]'
+        '^/home$ /',
+        '^/directions$ /',
+        '^/menu$ /',
+        '^/contact$ /'
       ]
     }
   });
