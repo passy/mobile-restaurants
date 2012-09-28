@@ -18,8 +18,9 @@
         </script>
     </head>
     <body>
-    <div class="container" ng-app>
-        <header role="banner">
+    <div class="container">
+        <header role="banner" ng-controller="HeaderController">
+            <a class="btn home left" title="Home" href="/" ng-hide="isHome()"></a>
             <a class="btn tel right" title="0431/805560 Anrufen" href="tel:0431805560"></a>
             <div class="inner">
                 <h1><figure class="logo"></figure></h1>

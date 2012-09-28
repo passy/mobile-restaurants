@@ -1,3 +1,4 @@
+/*globals: require */
 (function () {
   'use strict';
 
@@ -13,7 +14,7 @@
     }
   });
 
-  require(['AngularJS', 'app', 'directives'], function (angular) {
+  require(['AngularJS', 'app', 'directives', 'controllers/header'], function (angular) {
     angular.bootstrap(document, ['appheaven']);
   });
 }());
