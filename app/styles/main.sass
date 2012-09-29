@@ -2,6 +2,7 @@
 @import "compass/css3/images"
 @import "compass/css3/font-face"
 @import "compass/css3/box-shadow"
+@import "compass/css3/hyphenation"
 
 $BACKGROUND_MIXED_COLOR: #eee
 $BACKGROUND_BASIC_COLOR: #f2f2f2
@@ -41,24 +42,6 @@ a
     &:hover
         color: $HIGHLIGHT_COLOR
 
-@-webkit-keyframes in
-    from
-        -webkit-transform: translateX(-100%)
-    to
-        -webkit-transform: translateX(0%)
-
-@-webkit-keyframes out
-    from
-        -webkit-transform: translateX(0%)
-    to
-        -webkit-transform: translateX(100%)
-
-.anim-in
-    -webkit-animation: "in" 0.5s
-
-.anim-out
-    -webkit-animation: "out" 0.5s
-
 .btn
     +background(image_url("noise.png"), linear-gradient(#262626, #222))
     +box-shadow(#111 0 0 1px inset)
@@ -87,6 +70,60 @@ a
 
     &.home::after
         content: "U"
+
+.box
+    +box-shadow(transparentize(#111, 0.5) 0 0 10px inset)
+    +crossed-bg
+    border: 1px solid $BORDER_COLOR
+    padding: 8px
+    margin-bottom: 8px
+
+.icon
+    display: block
+    font-family: "icons"
+    font-size: 40px
+    color: $HIGHLIGHT_COLOR
+    text-shadow: 0 1px 1px #111
+    position: relative
+    left: -3px
+
+    a
+        color: $TEXT_COLOR
+
+.inline-icon
+    @extend .icon
+    display: inline-block
+
+.spotlight
+    text-align: center
+    line-height: 0
+    margin-bottom: 8px
+
+    img
+        width: 100%
+
+.timetable
+    @extend .box
+
+    header
+        text-align: center
+        line-height: 20px
+        vertical-align: top
+
+    dl
+        margin: 0
+        overflow: hidden
+
+    dt
+        float: left
+        clear: left
+    dd
+        text-align: right
+        font-weight: bold
+
+.prose
+    text-align: justify
+    +hyphenation
 
 [role="banner"]
     position: relative
@@ -128,6 +165,7 @@ a
 [role="main"]
     position: relative
     margin: 8px 16px
+    font-size: 115%
 
     .content
         position: absolute
@@ -170,14 +208,4 @@ a
             width: 100%
             text-align: center
 
-        figure
-            display: block
-            font-family: "icons"
-            font-size: 40px
-            color: $HIGHLIGHT_COLOR
-            text-shadow: 0 1px 1px #111
-            position: relative
-            left: -3px
-
-            a
-                color: $TEXT_COLOR
+@import animations
