@@ -2,21 +2,20 @@
 (function () {
     'use strict';
 
-    define(['AngularJS'], function (angular) {
+    define(['AngularJS', 'underscore'], function (angular, _) {
         return angular.module('appheaven', []).config([
             '$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-                var TEMPLATE_URL = '/templates';
+                var TEMPLATE_URL = '/templates',
+                    templateViews = ['home', 'contact', 'directions'];
 
-                $routeProvider
-                    .when('/home', {
-                        templateUrl: TEMPLATE_URL + '/home.html'
-                    })
-                    .when('/contact', {
-                        templateUrl: TEMPLATE_URL + '/contact.html'
-                    })
-                    .otherwise({redirectTo: '/home'});
+                _.map(templateViews, function (view) {
+                    $routeProvider.when('/' + view, {
+                        templateUrl: TEMPLATE_URL + '/' + view + '.html'
+                    });
+                });
+                $routeProvider.otherwise({redirectTo: '/home'});
 
-                // $locationProvider.html5Mode(true);
+                $locationProvider.html5Mode(true);
             }
         ]);
     });

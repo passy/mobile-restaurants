@@ -6,11 +6,15 @@
     shim: {
       AngularJS: {
         exports: 'angular'
+      },
+      underscore: {
+        exports: '_'
       }
     },
 
-    paths: {
-      AngularJS: 'vendor/AngularJS/angular'
+ paths: {
+    AngularJS: 'vendor/AngularJS/angular',
+    underscore: 'vendor/underscore/underscore',
     }
   });
 
