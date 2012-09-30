@@ -39,7 +39,7 @@
             };
 
             createElement = function (locals, template, newScope, parantElm) {
-                var element = angular.element('<div class="content">' + template +
+                var element = angular.element('<div class="wrap">' + template +
                                               '</div>'),
                     controller;
 
