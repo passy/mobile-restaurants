@@ -12,7 +12,7 @@ $BORDER_COLOR: #c7c7c7
 $HIGHLIGHT_COLOR: #390
 $TEXT_COLOR: #333
 
-$HEADER_HEIGHT: 16px * 3
+$HEADER_HEIGHT: 3em
 
 +font-face("icons", inline-font-files("icons.woff", woff))
 
@@ -46,9 +46,9 @@ a
     +background(image_url("noise.png"), linear-gradient(#262626, #222))
     +box-shadow(#111 0 0 1px inset)
 
-    height: 8px * 5
-    width: 8px * 5
-    line-height: 8px * 5
+    height: 1em
+    width: 1em
+    line-height: 1.1em
 
     display: inline-block
     padding-right: 7px
@@ -56,7 +56,7 @@ a
     border-radius: 8px
     color: white
     font-family: "icons"
-    font-size: 35px
+    font-size: 2.2em
     text-align: center
     text-decoration: none
     text-shadow: 0 1px 1px #111
@@ -75,13 +75,13 @@ a
     +box-shadow(transparentize(#111, 0.5) 0 0 10px inset)
     +crossed-bg
     border: 1px solid $BORDER_COLOR
-    padding: 8px
-    margin-bottom: 8px
+    padding: 1em
+    margin-bottom: 1em
 
 .icon
     display: block
     font-family: "icons"
-    font-size: 40px
+    font-size: 2.5em
     color: $HIGHLIGHT_COLOR
     text-shadow: 0 1px 1px #111
     position: relative
@@ -107,7 +107,7 @@ a
 
     header
         text-align: center
-        line-height: 20px
+        line-height: 1em
         vertical-align: top
 
     dl
@@ -155,16 +155,16 @@ a
         z-index: 10
 
     .right
-        right: 16px
-        top: 4px
+        right: 1%
+        top: 5%
 
     .left
-        left: 16px
-        top: 4px
+        left: 1%
+        top: 5%
 
 [role="main"]
     position: relative
-    margin: 8px 16px
+    margin: 1%
     font-size: 115%
 
     .content
@@ -174,7 +174,7 @@ a
 
         background: $BACKGROUND_CONTENT_COLOR
         border: 5px solid $BORDER_COLOR
-        padding: 16px
+        padding: 1%
 
 [role="navigation"]
     position: relative
@@ -183,18 +183,18 @@ a
     ul
         list-style-type: none
         list-style-position: inside
-        margin: 8px 16px 0 16px
+        margin: 1% 1% 0 1%
         padding: 0
         text-align: center
         white-space: nowrap
 
     li
         display: inline-block
-        height: 8px * 9
+        height: 4em
         width: 33.3333%
         text-align: center
 
-        padding-right: 8px
+        padding-right: 1%
 
         &:last-child
             padding: 0
