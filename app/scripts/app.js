@@ -6,7 +6,7 @@
         return angular.module('appheaven', []).config([
             '$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
                 var TEMPLATE_URL = '/templates',
-                    templateViews = ['home', 'contact', 'directions'];
+                    templateViews = ['home', 'contact', 'directions', 'menu'];
 
                 _.map(templateViews, function (view) {
                     $routeProvider.when('/' + view, {
