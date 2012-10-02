@@ -2,9 +2,11 @@
     <h2>Speisekarte: {{ menu.title }}</h2>
     <ul class="content-menu">
         <li ng-repeat="item in menu.items">
-            <header>{{ item.title }}</header>
-            <div>{{ item.price }}</div>
-            <p>{{ item.description }}</p>
+            <div class="item">
+                <header class="title">{{ item.name }}</header>
+                <div class="price">{{ (item.price / 100)|currency }}</div>
+                <p class="description">{{ item.description }}</p>
+            </div>
         </li>
     </ul>
 </ul>
