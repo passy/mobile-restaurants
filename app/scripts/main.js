@@ -13,11 +13,12 @@
       }
     },
 
-    paths: {
-        AngularJS: '/scripts/vendor/AngularJS/angular',
-        underscore: '/scripts/vendor/underscore/underscore',
-        text: '/scripts/vendor/requirejs/text',
-    }
+  paths: {
+    AngularJS: '../../components/AngularJS/angular',
+    requirejs: '../../components/requirejs',
+    text: '../../components/text/text',
+    underscore: '../../components/underscore/underscore',
+   }
   });
 
   require(['AngularJS', 'app', 'directives', 'controllers/header',
