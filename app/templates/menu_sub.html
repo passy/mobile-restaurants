@@ -1,0 +1,10 @@
+<div class="content-menu-wrapper" ng-controller="MenuSubController">
+    <h2>Speisekarte: {{ menu.title }}</h2>
+    <ul class="content-menu">
+        <li ng-repeat="item in menu.items">
+            <header>{{ item.title }}</header>
+            <div>{{ item.price }}</div>
+            <p>{{ item.description }}</p>
+        </li>
+    </ul>
+</ul>

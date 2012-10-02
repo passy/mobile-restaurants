@@ -2,7 +2,7 @@
     <h2>Speisekarte</h2>
     <ul class="content-menu">
         <li ng-repeat="item in menu">
-            <a href="#">{{ item.title }}</a>
+            <a href="/menu/{{ $index }}">{{ item.title }}</a>
         </li>
     </ul>
 </ul>

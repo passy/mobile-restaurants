@@ -13,6 +13,9 @@
                         templateUrl: TEMPLATE_URL + '/' + view + '.html'
                     });
                 });
+                $routeProvider.when('/menu/:index', {
+                    templateUrl: TEMPLATE_URL + '/menu_sub.html'
+                });
                 $routeProvider.otherwise({redirectTo: '/home'});
 
                 $locationProvider.html5Mode(true);
