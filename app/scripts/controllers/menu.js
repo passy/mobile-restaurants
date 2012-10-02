@@ -3,9 +3,9 @@
     'use strict';
 
     define(['app', 'text!resources/menu.json'], function (app, menuResource) {
-        app.controller('MenuController', ['$scope', function ($scope) {
-            var menu = JSON.parse(menuResource).menu;
-            $scope.menu = menu;
+        var menuData = JSON.parse(menuResource).menu;
+        app.controller('MenuController', ['$scope', '$route', function ($scope, $route) {
+            $scope.menu = menuData;
         }]);
     });
 }());

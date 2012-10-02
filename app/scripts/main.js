@@ -3,6 +3,7 @@
   'use strict';
 
   require.config({
+    baseUrl: "/scripts/",
     shim: {
       AngularJS: {
         exports: 'angular'
@@ -12,10 +13,10 @@
       }
     },
 
- paths: {
-    AngularJS: 'vendor/AngularJS/angular',
-    underscore: 'vendor/underscore/underscore',
-    text: 'vendor/requirejs/text',
+    paths: {
+        AngularJS: '/scripts/vendor/AngularJS/angular',
+        underscore: '/scripts/vendor/underscore/underscore',
+        text: '/scripts/vendor/requirejs/text',
     }
   });
 

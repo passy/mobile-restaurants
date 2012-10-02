@@ -184,6 +184,7 @@ module.exports = function( grunt ) {
         '^/home$ /',
         '^/directions$ /',
         '^/menu$ /',
+        '^/menu/(.*)$ /',
         '^/contact$ /'
       ]
     }
