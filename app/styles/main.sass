@@ -15,7 +15,7 @@ $TEXT_COLOR: #333
 
 $HEADER_HEIGHT: 3em
 
-+font-face("icons", inline-font-files("icons.woff", woff))
++font-face("icons", inline-font-files("icons.woff", woff) font-files("icons.ttf", "icons.svg", "icons.eot"))
 
 =striped-bg
     +background($BACKGROUND_BASIC_COLOR linear-gradient(-45deg, $BACKGROUND_STRIPES_COLOR, $BACKGROUND_STRIPES_COLOR 3%, transparent 3%, transparent 47%, $BACKGROUND_STRIPES_COLOR 47%, $BACKGROUND_STRIPES_COLOR 53%, transparent 53%, transparent 97%, $BACKGROUND_STRIPES_COLOR 97%, $BACKGROUND_STRIPES_COLOR 100%))
@@ -47,9 +47,7 @@ a
     +background(image_url("noise.png"), linear-gradient(#262626, #222))
     +box-shadow(#111 0 0 1px inset)
 
-    height: 1em
-    width: 1em
-    line-height: 1.1em
+    line-height: 1.2em
 
     display: inline-block
     padding-right: 7px
@@ -57,7 +55,9 @@ a
     border-radius: 8px
     color: white
     font-family: "icons"
-    font-size: 2.2em
+    font-size: 1.7em
+    padding: 0.2em
+    padding-bottom: 0
     text-align: center
     text-decoration: none
     text-shadow: 0 1px 1px #111
@@ -67,10 +67,10 @@ a
         color: white
 
     &.tel::after
-        content: "p"
+        content: "\f011"
 
     &.home::after
-        content: "U"
+        content: "\f00c"
 
 .box
     +box-shadow(transparentize(#111, 0.5) 0 0 10px inset)
@@ -78,18 +78,6 @@ a
     border: 1px solid $BORDER_COLOR
     padding: 1em
     margin-bottom: 1em
-
-.icon
-    display: block
-    font-family: "icons"
-    font-size: 2.3em
-    color: $HIGHLIGHT_COLOR
-    text-shadow: 0 1px 1px #111
-    position: relative
-    left: -3px
-
-    a
-        color: $TEXT_COLOR
 
 .inline-icon
     @extend .icon
@@ -209,8 +197,10 @@ a
 
                 &:after
                     right: 1em
+                    margin-top: -0.5em
                     position: absolute
-                    content: "4"
+                    content: "»"
+                    font-size: 2em
                     font-family: "icons"
                     color: $TEXT_COLOR
 
@@ -219,7 +209,7 @@ a
                 top: 50%
                 left: 4%
                 height: 1em
-                margin-top: -0.5em
+                margin-top: -1em
 
         .item
             position: relative
@@ -273,3 +263,4 @@ a
             text-align: center
 
 @import animations
+@import icons
