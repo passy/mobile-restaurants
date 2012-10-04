@@ -1,35 +1,69 @@
 {
-    "menu": [
+  "menu": [
+    {
+      "title": "Starters & Fingerfood",
+      "items": [
         {
-            "title": "Vorspeisen",
-            "items": [
-                {
-                    "name": "Hausgemachte Chips",
-                    "price": 350,
-                    "description": "Dünne Scheiben der weißen Kartoffel werden in einem Salzwasserbad eingelegt und danach in heißem Fett frittiert. Dazu reichen wir hausgemachtes Aioli."
-                }, {
-                    "name": "Bruschetta Pomodore",
-                    "price": 490,
-                    "description": "Vier kleine, in Knoblauchöl geröstete Scheiben unseres hausgebackenen Brotes mit dem typisch italienischen Belag aus gewürfelten sonnengereiften Tomaten, hausgemachtem Pesto und gehacktem Knoblauch."
-                }, {
-                    "name": "Olivenauswahl mit Schafkäse",
-                    "price": 520,
-                    "description": "Eine Auswahl grüner und schwarzer Oliven mit Würfeln vom Schafkäse. Dazu reichen wir unser hausgebackenes Brot mit frischer Aioli. Der ideale Begleiter zu einem Glas Wein."
-                }
-            ]
-        }, {
-            "title": "Hauptgerichte",
-            "items": [
-                {
-                    "name": "Toskanische Sesam-Röstkartoffeln",
-                    "price": 850,
-                    "description": "Frisch geröstete Kartoffelviertel in Kräuter-Pestobutter geschwenkt und mit Sesam bestreut. Serviert mit frischem Kräuterquark und knackig frischer Salatbeilage."
-                }, {
-                    "name": "Vegetarische Thaipfanne",
-                    "price": 950,
-                    "description": "Frische Paprika, rote Zwiebelringe, Kaiserschoten, grüner Spargel, Bambusstifte, gehackter Knoblauch, Zucchinischeibchen und Karottenstifte im Wok mit Ketjap Manis vitaminschonend gegart. Abgelöscht mit Kokosmilch und asiatischen Gewürzen, serviert mit duftigem Basmatireis."
-                }
-            ]
+          "name": "Chips & Salsa",
+          "price": 380,
+          "description": "Goldene Maistortilla-Chips mit roter mexikanischer Salsa"
+        },
+        {
+          "name": "Nachos",
+          "price": 520,
+          "description": "Knusprige Tortilla-Chips mit Lauchzwiebeln und Tomaten mit Cheddar & Mozzarella überbacken"
+        },
+        {
+          "name": "Red Hot Chili Poppers",
+          "price": 580,
+          "description": "Fünf scharfe rote Jalapeno-Poppers mit Garlic-Dip"
+        },
+        {
+          "name": "Quesadilla “Classic”",
+          "price": 580,
+          "description": "Weiche Weizentortilla mit Cheddar-Cheese gefüllt mit Crème Fraiche, Salsa, Guacamole und Bohnenmus"
         }
-    ]
+      ]
+    },
+    {
+      "title": "Pasta",
+      "items": [
+        {
+          "name": "Pappardelle “al pesto”",
+          "price": 880,
+          "description": "mit hausgemachtem Ruccola-Chili-Pesto & gehobeltem Parmesan"
+        },
+        {
+          "name": "Pappardelle “Lachs“",
+          "price": 1180,
+          "description": "mit Lachstreifen in Soja-Honig Marinade, Pfeffersauce und Blattspinat"
+        },
+        {
+          "name": "Pappardelle “Lamb-Filets“",
+          "price": 1780,
+          "description": "mit gegrillten Lamm-Filets, knackigen Gemüsen, frischem Koriander \nund pikant würziger Chipotlesauce"
+        }
+      ]
+    },
+    {
+      "title": "Vom Grill",
+      "items": [
+        {
+          "name": "Chicken “Sam`s Style”",
+          "price": 1080,
+          "description": "Hähnchenbrustfilets vom Grill auf fruchtiger Mango-Salsa,  \ngebratenes Grillgemüse, Criss Cut Potatoes und Salat"
+        },
+        {
+          "name": "Chicken “Mexican Pepper Style”",
+          "price": 1180,
+          "description": "Drei zarte Hähnchenbrustfilets mit groben Pfeffer gebraten, gegrillte Champignons, \nmexikanische Pfeffersauce, knusprige Würfelkartoffeln und Salat "
+        },
+        {
+          "name": "Lamb-Filet “Mexican Pepper Style”",
+          "price": 1880,
+          "description": "Gegrillte Lamm-Filets mit grobem Pfeffer auf roten Balsamico-Zwiebeln, \nPfeffersauce, Kräuterpilze mit Frühlingslauch, knusprige Würfelkartoffeln und Salat"
+        }
+      ]
+    }
+  ]
 }
