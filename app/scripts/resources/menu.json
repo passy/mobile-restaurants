@@ -1,35 +1,69 @@
 {
-    "menu": [
+  "menu": [
+    {
+      "title": "Appetizers",
+      "items": [
         {
-            "title": "Vorspeisen",
-            "items": [
-                {
-                    "name": "Hausgemachte Chips",
-                    "price": 350,
-                    "description": "Dünne Scheiben der weißen Kartoffel werden in einem Salzwasserbad eingelegt und danach in heißem Fett frittiert. Dazu reichen wir hausgemachtes Aioli."
-                }, {
-                    "name": "Bruschetta Pomodore",
-                    "price": 490,
-                    "description": "Vier kleine, in Knoblauchöl geröstete Scheiben unseres hausgebackenen Brotes mit dem typisch italienischen Belag aus gewürfelten sonnengereiften Tomaten, hausgemachtem Pesto und gehacktem Knoblauch."
-                }, {
-                    "name": "Olivenauswahl mit Schafkäse",
-                    "price": 520,
-                    "description": "Eine Auswahl grüner und schwarzer Oliven mit Würfeln vom Schafkäse. Dazu reichen wir unser hausgebackenes Brot mit frischer Aioli. Der ideale Begleiter zu einem Glas Wein."
-                }
-            ]
-        }, {
-            "title": "Hauptgerichte",
-            "items": [
-                {
-                    "name": "Toskanische Sesam-Röstkartoffeln",
-                    "price": 850,
-                    "description": "Frisch geröstete Kartoffelviertel in Kräuter-Pestobutter geschwenkt und mit Sesam bestreut. Serviert mit frischem Kräuterquark und knackig frischer Salatbeilage."
-                }, {
-                    "name": "Vegetarische Thaipfanne",
-                    "price": 950,
-                    "description": "Frische Paprika, rote Zwiebelringe, Kaiserschoten, grüner Spargel, Bambusstifte, gehackter Knoblauch, Zucchinischeibchen und Karottenstifte im Wok mit Ketjap Manis vitaminschonend gegart. Abgelöscht mit Kokosmilch und asiatischen Gewürzen, serviert mit duftigem Basmatireis."
-                }
-            ]
+          "name": "Chips'n Salsa",
+          "price": 360,
+          "description": "Tortilla Chips mit Tomatensalsa"
+        },
+        {
+          "name": "Nachos",
+          "price": 660,
+          "description": "Tortilla Chips mit Käse überbacken, Oliven, Lauch, Tomatenwürfel, Jalapeño-Chilischoten, Creme fraiche &Tomatensalsa"
+        },
+        {
+          "name": "Nachos Grande Ground beef",
+          "price": 830,
+          "description": "Tortilla Chips mit Käse überbacken, Tomatenwürfel, Oliven, Lauch, Jalapenño-Chilischoten, Creme fraiche, Tomatensalsa & Rinderhack"
+        },
+        {
+          "name": "Cream Cheese Poppers",
+          "price": 590,
+          "description": "Panierte rote Chilihälften, gefüllt mit Frischkäse mit Bar-B-Q-Dip"
         }
-    ]
+      ]
+    },
+    {
+      "title": "Steaks",
+      "items": [
+        {
+          "name": "Steak Western Pork",
+          "price": 1190,
+          "description": "200g Schweinelachse in Curry-rahmsauce"
+        },
+        {
+          "name": "Steak EL PASO",
+          "price": 1590,
+          "description": "250g Rumpsteak mit Tequila Bar-B-Q-Sauce, Guacamole"
+        },
+        {
+          "name": "Steak & Cheese",
+          "price": 1590,
+          "description": "250g Rumpsteak überbacken mit Käse"
+        }
+      ]
+    },
+    {
+      "title": "Pasta",
+      "items": [
+        {
+          "name": "al Capone",
+          "price": 790,
+          "description": "mit Hähnchenbruststreifen in Weißwein-Sahnesauce - mit Käse überbacken"
+        },
+        {
+          "name": "al Pesto",
+          "price": 750,
+          "description": "in milder Basilikum-Sahne-Sauce - mit Käse überbacken"
+        },
+        {
+          "name": "por Tanja",
+          "price": 890,
+          "description": "mit Lachsstreifen in Meerrettich-Sahne-Sauce - mit Käse überbacken"
+        }
+      ]
+    }
+  ]
 }
